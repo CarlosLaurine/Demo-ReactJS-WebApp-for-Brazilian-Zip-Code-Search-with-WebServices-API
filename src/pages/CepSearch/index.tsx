@@ -1,32 +1,31 @@
-import './styles.css';
+import './style.css';
 
 import ResultCard from 'components/ResultCard';
 
-const CepSearch = () => {
+const CEPSearch = () => {
   return (
-    <div className="cep-search-container">
+    <div className="zip-search-container">
       <h1 className="text-primary">Busca CEP</h1>
-      <div className="container search-container">
+      <div className="search-container container">
         <form>
           <div className="form-container">
             <input
               type="text"
               className="search-input"
-              placeholder="CEP (somente números)"
+              placeholder="CEP (Brazilian ZIP Code - Numbers Only)"
               onChange={() => {}}
             />
-            <button type="submit" className="btn btn-primary search-button">
+            <button type="submit" className="search-button btn btn-primary">
               Buscar
             </button>
           </div>
         </form>
 
-        <ResultCard title="Logradouro" description="Lalala" />
-        <ResultCard title="Número" description="234" />
-
+        <ResultCard title="Neighborhood" description="Copacabana" />
+        <ResultCard title="Number" description="1024" />
       </div>
     </div>
   );
 };
 
-export default CepSearch;
+export default CEPSearch;
