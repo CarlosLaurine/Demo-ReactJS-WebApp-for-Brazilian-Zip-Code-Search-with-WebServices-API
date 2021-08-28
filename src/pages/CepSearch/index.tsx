@@ -16,7 +16,7 @@ const CEPSearch = () => {
 
   return (
     <div className="zip-search-container">
-      <h1 className="text-primary">Busca CEP</h1>
+      <h1 className="text-primary">CEP Search</h1>
       <div className="search-container container">
         <form onSubmit={submissionHandler}>
           <div className="form-container">
