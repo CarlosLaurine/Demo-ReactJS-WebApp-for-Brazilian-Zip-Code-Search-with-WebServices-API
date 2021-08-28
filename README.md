@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -44,3 +45,7 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+=======
+# Demo-ReactJS-WebApp-for-Brazilian-Zip-Code-Search-with-WebServices-API
+Project Designed during Studies of React JS Fullstack Development and API Consuming Through Axios, ReactRouterDOM and ReactHooks (useState, useEffect, useParams). The API used for this Backend was the ViaCEP (https://viacep.com.br/).
+>>>>>>> f301927626e60906d7cf106ab3c837c7a02317d1
