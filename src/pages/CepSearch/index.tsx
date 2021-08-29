@@ -1,17 +1,29 @@
 import './style.css';
 
 import ResultCard from 'components/ResultCard';
+import { useState } from 'react';
+
+type FormData = {
+  zip: string;
+  test: string;
+};
 
 const CEPSearch = () => {
+  const [formData, setFormData] = useState<FormData>({
+    zip: '',
+    test: '',
+  });
+
   const changeHandler = (change: React.ChangeEvent<HTMLInputElement>) => {
-    console.log(
-      'Changed to => ' + change.target.value 
-    );
+    const name = change.target.name;
+    const value = change.target.value;
+
+    setFormData({ ...formData, [name]: value });
   };
 
   const submissionHandler = (submission: React.FormEvent<HTMLFormElement>) => {
     submission.preventDefault();
-    console.log('The Submission Button was Clicked');
+    console.log(formData);
   };
 
   return (
@@ -24,6 +36,16 @@ const CEPSearch = () => {
               type="text"
               className="search-input"
               placeholder="CEP (Brazilian ZIP Code - Numbers Only)"
+              name="zip"
+              value={formData.zip}
+              onChange={changeHandler}
+            />
+            <input
+              type="text"
+              className="search-input"
+              placeholder="CEP Test"
+              name="test"
+              value={formData.test}
               onChange={changeHandler}
             />
             <button type="submit" className="search-button btn btn-primary">
